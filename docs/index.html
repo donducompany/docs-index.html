@@ -5,73 +5,72 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>돈두무식</title>
     <style>
-        /* 기본 스타일 초기화 */
+        /* 기본적인 스타일 초기화 */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-
-        /* 배경과 텍스트 스타일 */
+        
         body {
             font-family: 'Arial', sans-serif;
-            background-color: #1db954; /* 스포티파이 그린 */
-            color: white;
+            background-color: #212121; /* 어두운 배경 */
+            color: #fff;
             text-align: center;
             margin: 0;
             padding: 0;
-            height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
         }
 
-        /* 타이틀 스타일 */
+        /* 헤더 스타일 */
         h1 {
-            font-size: 4em;
             color: #ffffff;
-            margin-bottom: 20px;
+            font-size: 4em;
+            margin-top: 50px;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
         }
 
-        /* 설명 텍스트 */
+        /* 설명 텍스트 스타일 */
         p {
             font-size: 1.5em;
-            color: #eaeaea;
-            margin-bottom: 30px;
+            margin: 20px 0;
+            color: #b3b3b3;
         }
 
         /* 버튼 스타일 */
         button {
-            background-color: #1db954; /* 스포티파이 그린 */
-            color: white;
+            background-color: #ff5500; /* 사운드클라우드의 버튼 색상 */
+            border: none;
             padding: 15px 30px;
             font-size: 18px;
-            border-radius: 50px;
-            border: none;
+            color: #fff;
+            border-radius: 30px;
             cursor: pointer;
             margin: 10px;
-            transition: background-color 0.3s;
+            transition: background-color 0.3s ease;
         }
 
         button:hover {
-            background-color: #1ed760; /* 마우스 호버시 색상 변화 */
+            background-color: #ff7400; /* 버튼에 마우스를 올렸을 때 색상 변화 */
         }
 
         /* 오디오 플레이어 스타일 */
         audio {
             margin-top: 30px;
             width: 80%;
-            background-color: #1db954;
+            background-color: #ff5500;
             border-radius: 10px;
         }
 
-        /* 버튼들 컨테이너 */
+        /* 버튼들을 담고 있는 섹션 스타일 */
         .buttons-container {
             display: flex;
-            flex-direction: column;
-            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 50px;
+        }
+
+        .buttons-container button {
+            margin: 15px;
         }
 
     </style>
@@ -92,7 +91,7 @@
         function playSong(songName) {
             const audioPlayer = document.getElementById('audioPlayer');
             audioPlayer.src = songName;
-            audioPlayer.style.display = 'block'; // 오디오 플레이어 표시
+            audioPlayer.style.display = 'block'; // 오디오 플레이어를 보이게 설정
             audioPlayer.play(); // 노래 재생
         }
     </script>
